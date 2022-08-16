@@ -1,0 +1,366 @@
+@CHARSET "UTF-8";
+#allContent{/*中间整体部分*/
+	background:rgb(252,252,252);
+	border-bottom: 1px solid rgb(213,213,213);
+	box-shadow:0 0 1px rgb(213,213,213);
+	padding: 1px;
+}
+#content{/*中间内容部分*/
+	width: 1000px;
+	height:650px;
+	margin:auto;
+	margin-bottom: 40px;	
+	margin-top: 20px;
+	border: solid 1px rgb(216,216,216);	
+	box-shadow:0 0 3px rgb(213,213,213);
+	border-radius:4px;
+}
+#allLeft{/*左边部分*/
+	width: 300px;
+	height:648px;
+	float:left;
+	border-right: solid 1px rgb(222,222,222);
+	background:rgb(250,250,250);
+}
+#allRight{
+	height:648px;
+	width:698px;
+	float:left;
+	display: none;
+}
+
+#myInfo{/*我的个人信息DIV*/
+	padding:10px;
+	height: 90px;	
+}
+#myHeadDiv{/*我的头像DIV*/
+	width: 64px;
+	position: absolute;
+	border-radius:32px;
+	height: 64px;
+	overflow: hidden;	
+}
+#myHead{/*我的头像*/
+	width:64px;
+	position:absolute;
+	clip:rect(0px 64px 64px 0px);	
+}
+#myName{/*我的名字*/
+	margin-left: 75px;
+	position: relative;
+	top:20px;
+	font-size: 17px;
+}
+#chatTabsDiv{/*装有三个选项卡的Div*/
+	border-bottom: 1px rgb(230,230,230) solid;
+	height: 31px;	
+}
+.chatTab{/*三个搜索的选项卡*/
+	float: left;
+	background:rgb(250,250,250);
+	height: 30px;
+	width:80px;
+	font-size:13px;
+	text-align:center;
+	line-height:30px;
+	color:rgb(146,146,146);
+	cursor:pointer;	
+}
+.chatTabActive{/*选项卡被激活后的样式*/
+	border:solid 1px rgb(230,230,230) ;
+	border-top:3px solid rgb(236,93,167);
+	border-bottom:none;
+	height:31px;
+	z-index:1px;	
+}
+.chatContent{	
+	height: 510px;
+	position:absolute;
+	width:299px;
+	margin-top:10px;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	
+}
+.chatContent:not(#fristChatContent){/*搜索内容*/
+	display: none;
+}
+
+.friendDiv{/*朋友DIV*/
+	height:60px;
+	padding-left: 15px;
+	padding-top: 8px;
+	cursor: pointer;
+	margin-top: 5px;
+}
+
+.frienHeaddDiv{/*朋友头像DIV*/
+	width: 42px;
+	position: absolute;
+	height: 42px;
+	border-radius:3px;
+	overflow: hidden;
+	
+}
+.friendHead{/*朋友头像*/
+	width: 42px;
+	position:absolute;
+	clip:rect(0px 42px 42px 0px);
+}
+.friendName{/*朋友的名字*/
+	margin-left: 55px;
+	font-size: 14px;
+	color:rgb(51,51,51);
+}
+.onlineState{/*朋友状态*/
+	color:red;
+	font-size: 12px;
+}
+.downState{
+	color:gray;
+	font-size: 12px;
+}
+.messgaeCount{
+	float:right;
+	display:inline-block;
+	margin-right:20px;
+	margin-top:4px;
+}
+.nearMessage{/*最近一条消息*/
+	margin-left: 55px;
+	font-size: 12px;
+	display:inline-block;
+	color:rgb(100,100,100);
+	margin-top: 3px;
+	width: 150px;
+	height:20px;
+	overflow: hidden;
+}
+.messageTime{/*消息时间*/
+	float:right;
+	margin-top:7px;
+	margin-right:20px;
+	color:rgb(120,120,120);
+	font-size: 12px;
+}
+#friendInfo{/*聊天面板的用户信息*/
+	height: 70px;
+	border-bottom: solid 1px rgb(216,216,216);
+}
+#fiHeaddDiv{
+	margin: 15px;
+	width: 45px;
+	height: 45px;
+	position: absolute;
+	border-radius:5px;
+	overflow: hidden;
+}
+#fiHead{
+	width: 45px;
+	position:absolute;
+	clip:rect(0px 45px 45px 0px);
+}
+#fiNickName{/*聊天面板的用户昵称*/
+	display:inline-block;
+	font-size:15px;
+	margin-left: 80px;
+	margin-top: 15px;
+}
+#heartInfo{/*内心独白*/
+	font-size: 12px;
+	height:18px;
+	overflow:hidden;
+	width:500px;
+	color:rgb(100,100,100);
+	margin-left: 80px;
+	margin-top: -5px;
+}
+.meHeaddDiv{ /*消息头像DIV*/
+	width: 36px;
+	position: absolute;
+	height: 36px;
+	border-radius: 18px;
+	overflow: hidden;
+}
+.meHead{
+	width: 36px;
+	position:absolute;
+	clip:rect(0px 36px 36px 0px);
+}
+#messageContent{
+	height: 430px;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	width: 700px;
+	border-bottom: solid 1px rgb(216,216,216);
+	
+}
+.leftMessage { /*左边的消息*/
+	margin-left:10px;
+	position: relative;
+	float: left;
+	width: 650px;
+	margin-top:10px;
+	margin-bottom: 5px;
+}
+.leftTriangle {
+	float: left;
+	width: 0px;
+	margin-top: 13px;	
+	height: 0px;
+	margin-left:38px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent rgb(223,223,223) transparent transparent;
+}
+.leftMessageText{
+	background: rgb(223,223,223);
+	font-size:13px;
+	border-radius:4px;
+	display:inline-block;
+	min-height: 30px;
+	min-width:30px;
+	max-width:350px;
+	margin-top: 5px;
+	text-align:center;
+	padding: 7px;
+}
+.rightMessage{
+	margin-top:10px;
+	margin-bottom: 5px;
+	right:10px;
+	position:relative;
+	float: right;
+	width: 650px;
+}
+.rightMessage .meHeaddDiv{
+	top:0px;
+	right: 0px;
+}
+.rightTriangle {
+	float: right;
+	width: 0px;
+	margin-top: 13px;
+	margin-right: 18px;
+	height: 0px;
+	border-width: 5px;
+	margin-right: 35px;
+	border-style: solid;
+	border-color: transparent transparent transparent rgb(178,226,129);
+}
+.rightMessageText{
+	background: rgb(178,226,129);
+	font-size:13px;
+	border-radius:4px;
+	min-height: 30px;
+	min-width:40px;
+	text-align:center;
+	max-width:350px;
+	margin-top: 5px;
+	float:right;
+	padding: 7px;
+	
+}
+
+
+.meHead { /*消息头像*/
+	width: 36px;
+	position: absolute;
+	clip: rect(0px, 36px, 36px, 0px);
+}
+.a-upload {
+   
+  	 width:30px;
+    height: 25px;
+    position:relative;
+    top:18px;
+    left:17px;
+    background-repeat:no-repeat;
+    background-image:url("../../images/chat/picture.png");
+    cursor: pointer;
+    display:inline-block;
+    overflow: hidden;
+    *display: inline;
+    *zoom: 1;
+}
+
+.a-upload  input {
+    width:30px;
+    height: 25px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+
+}
+.sendImg{/*发送的图片*/
+	max-width: 340px;
+	max-height: 200px;
+	display:block;
+	overflow: hidden;
+}
+#writeContent{
+	position: relative;
+}
+#writeOpreation img{/*发消息的操作*/
+	margin-left: 25px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+#allFace{/*左右表情Div*/
+	height: 200px;
+	width: 400px;
+	background: white;
+	position: absolute;
+	top:-210px;
+	left: 10px;
+	display:none;
+	border: solid 1px rgb(226,226,226);
+}
+#allFace table{
+	margin: 10px;
+}
+#allFace td{
+	width: 45px;
+	height: 45px;
+}
+#allFace img{
+	cursor: pointer;
+}
+#messageArea{/*消息发送框*/
+	border: none;
+	background: rgb(242,242,242);
+	margin-left: 20px;
+	margin-top: 10px;
+}
+#writeMessage{/*写消息的div*/
+	width: 550px;
+	margin-top:10px;
+	margin-left:20px;
+	height: 100px;
+	float: left;
+	overflow-y:auto; 
+}
+#writeMessage:ACTIVE{
+	outline: none;
+	border: none;
+}
+
+#sendMessage{
+	width: 100px;
+	height: 35px;
+	text-align: center;
+	line-height: 35px;
+	border: solid 1px rgb(193,193,193);
+	float: right;
+	margin-top:70px;
+	margin-right:20px;
+	border-radius:3px;
+	cursor: pointer;
+}
+#footer{/**/
+	width: 850px;
+	margin:auto;
+	margin-top:40px;
+	margin-bottom: 40px;
+	
+}

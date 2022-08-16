@@ -1,0 +1,206 @@
+@CHARSET "UTF-8";
+#allCRight{
+	margin-top: 20px;
+	width:795px;
+	background:white;
+	float: right;
+	border: 1px solid rgb(213,213,213);
+	box-shadow:0 0 5px rgb(213,213,213);
+}
+#readEmailPoint{/*读信提醒*/
+	color:rgb(150,150,150);
+	font-size: 13px;
+	font-weight: 100;
+	padding:15px 10px 15px 20px;
+	border-bottom: 1px solid rgb(236,236,236);
+}
+#readEmailPoint img{
+	margin-right: 6px;
+	margin-bottom: 2px;
+}
+#backEmailList{/*返回私信列表*/
+	float: right;
+	border: solid 1px rgb(180,180,180);
+	color:rgb(100,100,100);
+	height: 30px;
+	width: 80px;
+	text-align: center;
+	line-height: 30px;
+	border-radius:3px;
+	cursor: pointer;
+	margin-top: -5px;
+}
+#backEmailList:HOVER{
+	background: rgb(245,245,245);
+}
+#usersInfo{/*用户信息DIV*/
+	height: 130px;
+	border-bottom: 1px solid rgb(222,222,222);
+	padding: 1px;
+}
+#writeEmailLogo{
+	float:right;
+	height: 120px;
+	position: relative;
+	top:-10px;
+}
+#headPictureDiv{/*头像Div*/
+	height: 100px;
+	width: 90px;
+	border: solid 5px rgb(236,236,236);
+	box-shadow:0 0 5px rgb(200,200,200);
+	margin-top: 15px;
+	margin-left: 15px;
+	float: left;
+}
+#headPictureDiv img{/*头像Div*/
+	position: absolute;
+	width: 80px;
+	clip: rect(0px 80px 90px 0px);
+}
+#textInfoDiv{/*用户文字信息的Div*/
+	height: 120px;
+	width:666px;
+	float:left;
+	margin-left:20px;
+	margin-top: 10px;
+	padding-top: 10px;
+}
+#nickName{/*用户昵称*/
+	color:rgb(236,93,167);
+	font-weight: bold;
+	font-size: 15px;
+	margin-top: 10px;
+}
+#validate{/*验证图片*/
+	width: 18px;
+	border-radius:9px;
+	margin-bottom:3px; 
+	margin-left: 7px;
+}
+#viewInfo{/*查看资料*/
+	font-size: 12px;
+	display:inline-block;
+	margin-left: 10px;
+	position:relative;
+	top:2px;
+	cursor: pointer;
+}
+#baseInfo{/*基本信息*/
+	margin-top: 10px;
+	margin-left: 3px;
+	font-size: 13px;
+	color:rgb(120,120,120);
+	
+}
+#photoCount{/*照片数量*/
+	font-size:13px;
+	color:rgb(120,120,120);
+	margin-left: 3px;
+}
+#lastLoginTime{/*上次登录时间*/
+	margin-left: 20px;
+	color:rgb(120,120,120);
+	font-size:13px;
+}
+#emailContent{/*私信的内容DIV*/
+	
+	margin-bottom: 30px;
+}
+#newEmailContent{/*最新消息的Div*/
+	margin: auto;
+	width: 750px;
+	margin-top:20px;
+	border-bottom: solid 1px rgb(236,236,236);
+	border-bottom-style: dashed;
+}
+
+.emBNickName{/*男私信昵称*/
+	font-size: 14px;
+	font-weight: 500px;
+	color:rgb(25,160,198);
+}
+.emGNickName{/*女私信昵称*/
+	font-size: 14px;
+	font-weight: 500px;
+	color:rgb(235,61,77);
+}
+.emTime{/*每一条私信的时间*/
+	color:rgb(150,150,150);
+	font-size: 12px;
+	margin-left: 20px;
+}
+.emText{/*私信的文本内容*/
+	margin-top: 10px;
+	margin-bottom:10px;
+	font-size: 15px;
+	width:600px;
+	color:rgb(100,100,100);
+}
+#moreEmailPoint{/*更多私信记录*/
+	margin-top: 20px;
+	color:rgb(100,100,100);
+	margin-left: 20px;
+	cursor: pointer;
+}
+#moreEmail:HOVER{
+	text-decoration: underline;
+}
+#allMoreEmail{
+	border: solid 1px rgb(226,226,226);
+	margin: 10px 20px 0 20px;
+	max-height: 400px;
+	overflow-y: auto;
+}
+.moreEmail{/*更多记录的每一个Div*/
+	padding: 10px 10px 0px 10px;
+}
+.moreEmailBorder{
+	border-bottom: solid 1px rgb(226,226,226);
+	border-bottom-style: dashed;
+}
+#opretion{
+	padding: 10px 20px 20px 20px;
+	margin-top:40px;
+	border-top: solid 1px rgb(226,226,226);
+	border-top-style: dashed;
+}
+.opretionText{/*回信操作的文本*/
+	margin: auto 20px auto 10px ;
+	font-size: 13px;
+	color:rgb(100,100,100);
+	cursor: pointer;
+}
+.opretionText:HOVER{
+	text-decoration: underline;
+}
+#writeBackDiv{/*回信的DIV*/
+	margin-left: 20px;
+	
+}
+.sureWriteBack{/*免费回复*/
+	color:white;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	line-height:36px;
+	margin:auto;
+	position:relative;
+	top:20px;
+	margin-bottom:40px;
+	width:100px;
+	height:36px;
+	background-repeat:no-repeat;
+	background-image: url(../../images/myTaoMei/saveinfo1.png);
+	cursor: pointer;
+	clear: both;
+}
+.sureWriteBack:HOVER{
+	background-image: url(../../images/myTaoMei/saveinfo2.png);
+}
+#footer{/*页脚部分*/
+	width: 850px;
+	margin:auto;
+	margin-top:40px;
+	margin-bottom: 40px;
+}

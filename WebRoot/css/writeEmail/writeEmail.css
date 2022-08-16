@@ -1,0 +1,220 @@
+@CHARSET "UTF-8";
+
+#header{
+	width:900px;
+	margin: auto;
+	margin-top: 8px;
+	height: 50px;
+
+}
+#header img{
+	float: left;
+	width: 160px
+}
+#header div{
+	float:left;
+	border-left:solid 1px rgb(215,215,215);
+	width: 1px;
+	height: 40px;
+	margin-top: 5px;
+	margin-left: 20px;
+}
+#header span{
+	display:inline-block;
+	font-size: 18px;
+	color:rgb(255,84,106);
+	margin-left: 13px;
+	margin-top: 13px;
+}
+#allCenter{
+	background:rgb(252,252,252);
+	border-bottom: solid 2px rgb(235,235,235);
+	box-shadow:0 0 1px rgb(180,180,180);
+	padding: 1px;
+}
+#center{
+	width: 850px;
+	height: 530px;
+	margin: auto;
+	background: white;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	border: 1px solid rgb(213,213,213);
+	box-shadow:0 0 5px rgb(213,213,213);
+	
+}
+#usersInfo{/*用户信息DIV*/
+	height: 130px;
+	border-bottom: 1px solid rgb(249,213,228);
+	padding: 1px;
+	box-shadow:0 0 5px rgb(249,213,228);
+	
+}
+#logo{
+	float:right;
+	height: 120px;
+	position: relative;
+	top:-10px;
+}
+#headPictureDiv{/*头像Div*/
+	height: 100px;
+	width: 90px;
+	border: solid 5px rgb(236,236,236);
+	box-shadow:0 0 5px rgb(200,200,200);
+	margin-top: 15px;
+	margin-left: 15px;
+	float: left;
+}
+#headPictureDiv img{/*头像Div*/
+	position: absolute;
+	width: 80px;
+	clip: rect(0px 80px 90px 0px);
+}
+#textInfoDiv{/*用户文字信息的Div*/
+	height: 120px;
+	width:721px;
+	float:left;
+	margin-left:20px;
+	margin-top: 10px;
+	padding-top: 10px;
+}
+#nickName{/*用户昵称*/
+	color:rgb(236,93,167);
+	font-weight: bold;
+	font-size: 15px;
+	margin-top: 10px;
+}
+#validate{/*验证图片*/
+	width: 18px;
+	border-radius:9px;
+	margin-bottom:3px; 
+	margin-left: 7px;
+}
+#viewInfo{/*查看资料*/
+	font-size: 12px;
+	display:inline-block;
+	margin-left: 10px;
+	position:relative;
+	top:2px;
+	cursor: pointer;
+}
+#baseInfo{/*基本信息*/
+	margin-top: 10px;
+	margin-left: 3px;
+	font-size: 13px;
+	color:rgb(120,120,120);
+}
+#photoCount{/*照片数量*/
+	font-size:13px;
+	color:rgb(120,120,120);
+	margin-left: 3px;
+}
+#lastLoginTime{/*上次登录时间*/
+	margin-left: 20px;
+	color:rgb(120,120,120);
+	font-size:13px;
+}
+#writeContent{/*写信的全部内容*/
+	border-bottom: 1px solid rgb(216,216,216);
+	height:325px;
+}
+#writeAreaDiv{/*写信Div*/
+	height:330px;
+	width:610px;
+	float: left;
+}
+#writeArea{/*写信内容Area*/
+	font-size: 14px;
+	color:rgb(90,90,90);
+	padding:10px 0 10px 20px;
+	border: none;
+	border-right: 1px solid rgb(230,230,230);	
+}
+#writeHelp{/*写信帮助*/
+	float: right;
+	width:230px;
+	
+}
+#helipTitle{/*帮助标题*/
+	color:rgb(255,84,106);
+	padding-top:5px;
+	font-size:13px;
+	margin-top: 10px;
+}
+.help{
+	color:rgb(100,100,100);
+	font-size: 14px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+.help:HOVER{
+	text-decoration: underline;
+}
+.help img{
+	width: 9px;
+}
+.useHelp{
+	color:rgb(51,122,183);
+	display: inline-block;
+	margin-left: 10px;
+	text-decoration: underline;
+	cursor: pointer;
+}
+#sendMessage{/*发送消息的整体DIV*/
+	width: 400px;
+	height: 35px;
+	margin-left:100px;
+	margin-top: 15px;
+	float: left;
+}
+.send{/*发送信息*/
+	color:white;
+	text-align: center;
+	float: left;
+	cursor: pointer;
+	height: 35px;
+	font-weight: bold;
+	line-height: 33px;
+	border-radius:5px;
+	font-size: 15px;
+}
+#vipSend{
+	background: rgb(99,152,204);
+	border: 1px solid rgb(76,160,224);
+	width: 115px;	
+}
+#vipSend:HOVER{
+	background: rgb(76,160,224);
+}
+#meiyuanSend{
+	background: rgb(255,150,64);
+	border: 1px solid rgb(255,170,80);
+	width: 115px;
+	margin-left: 25px;
+}
+#meiyuanSend:HOVER{
+	background: rgb(255,170,80);;
+}
+#justSend{
+	border: 1px rgb(150,150,150) solid;
+	color:rgb(70,70,70);
+	width: 100px;
+	margin-left: 25px;
+}
+#justSend:HOVER{
+	background: rgb(240,240,240);
+}
+#sendPointe{
+	color:rgb(120,120,120);
+	margin-top:40px;
+	float:right;
+	font-size:12px;
+	height: 25px;
+	width: 300px;
+	
+}
+#footer{
+	width: 850px;
+	margin:auto;
+	margin-top:40px;
+}

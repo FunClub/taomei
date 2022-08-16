@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yucheng.taomei.vo.email">
+	
+	<!-- 添加一条新的私信 -->
+	<insert id="insertEmail">
+		insert into email(from_emid,to_emid,content,fromState,toState,emailTime,contentSize) 
+		values(#{from_emid},#{to_emid},#{content},#{fromState},#{toState},#{emailTime},#{contentSize})
+	</insert>
+	
+	<!--查询我的私信列表  -->
+	<select id="getListEmail" resultType="ListEmail">	
+		select top 10 * from (select email_id,from_emid,to_emid,headPicture,nickName,age,city,emailTime,contentSize,fromState,toState from users,email 
+		where from_emid=#{users_id} and to_emid=users_id 
+		UNION select email_id,from_emid,to_emid,headPicture,nickName,age,city,emailTime,contentSize,fromState,toState from users,email 
+		where to_emid=#{users_id} and from_emid=users_id)s where email_id not in (select top ${page} email_id from email order by emailTime desc) order by emailTime desc 
+	</select>
+	
+	<!-- 查询我有多少条私信 -->
+	<select id="getEmailSize" resultType="int">
+		select count(*) from (select email_id from email where from_emid=#{value} UNION select email_id from email where to_emid=#{value})s 
+	</select>
+	
+	<!--查询我私信的状态 -->
+	<select id="getEmailState" resultType="StateEmail">
+		select * from (select from_emid,emailTime,fromState,toState from email where from_emid=#{value} UNION select from_emid,emailTime,fromState,toState from email where to_emid=#{value})s 
+	</select>
+	
+	<!--查看一条私信  -->
+	<select id="getOneEmail" resultType="ShowOneEmail">
+		select email_id,content, users_id,nickName,age,height,sex,marriage,educational,city,town,income,photo,headPicture,lastLoginTime from users,email 
+		where users_id=#{users_id} and email_id=#{email_id}
+	</select>
+	
+	<!-- 修改一条私信的内容 -->
+	<update id="updateContEmails1">
+		update email set content=#{content},emailTime=#{emailTime},fromState=0,contentSize=#{contentSize} where email_id=#{email_id} and from_emid=#{users_id}
+	</update>
+	<update id="updateContEmails2">
+		update email set content=#{content},emailTime=#{emailTime},toState=0,contentSize=#{contentSize} where email_id=#{email_id} and to_emid=#{users_id}
+	</update>
+	
+	<!-- 修改我的一条私信的状态为已读users_id是对方的 -->
+	<update id="updateEmailState1">
+		update email set fromState=1 where email_id=#{email_id} and to_emid=#{users_id}
+	</update>
+	<update id="updateEmailState2">
+		update email set toState=1 where email_id=#{email_id} and from_emid=#{users_id}
+	</update>
+	<!-- 删除私信 -->
+	<delete id="deleteEmail">
+		delete from email where email_id=#{value}
+	</delete>
+</mapper>

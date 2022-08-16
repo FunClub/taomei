@@ -1,0 +1,602 @@
+@CHARSET "UTF-8";
+
+/*右边部分begin*/
+#allCRight{
+	margin-top: 20px;
+	width:795px;
+	background:white;
+	float: right;
+	border: 1px solid rgb(213,213,213);
+	box-shadow:0 0 5px rgb(213,213,213);
+}
+#rightTitle{/*资料显示的标题部分*/	
+	margin-top:10px;
+	margin-bottom: 10px;
+}
+#rightTitleInfoPerfect{/*资料完善度DIV*/
+	display: inline-block;
+	margin-left: 150px;
+	width: 300px;
+}
+.progress{/*资料进度条*/
+	display: inline-block;
+	width: 200px;
+	margin-top: 20px;
+	padding: 0px;
+	float: right;
+}
+#rightTitleInfoPerfectText{/*资料完善度文本*/
+	display: inline-block;
+	margin-top: 20px;
+	float:left;
+	color:rgb(150,150,150);
+}
+#rightInfoImg{/*右边的资料显示图片*/
+	margin-left: 15px;
+	float: left;
+}
+#rightInfoText1{/*右边资料的文本显示*/
+	font-size: 19px;
+	line-height: 30px;
+	margin-left: 20px;
+	margin-top: 10px;
+	display: inline;
+	float: left;
+}
+#rightInfoText2{
+	float:right;
+	color:rgb(180,180,180);
+	text-decoration:underline;
+	margin-right: 20px;
+	margin-top:20px;
+	font-size: 12px;
+}
+.infoText{/*具体资料的文本显示，比如昵称文本*/
+	color:rgb(120,120,120);
+	font-size: 14px;
+	margin-right: 5px;
+}
+
+#baseInfo{
+	margin-bottom: 20px;
+}
+.infoDiv{
+	border-bottom: solid 1px rgb(222,222,222);
+	float: left;
+	margin: auto;
+	padding-bottom: 10px;
+}
+.infoDiv input{/*基本信息下面的基础框*/
+	height: 27px;
+	width: 180px;
+	font-size:13px;
+	
+}
+.infoDivLeft{/*基本资料的左边div*/
+	float: left;
+	margin-left:20px;
+	width:385px;
+}
+.infoDivRight{/*基本资料右边Div*/
+	float: right;
+	width:330px;
+	margin-right:8px;	
+}
+.selectInfo{/*下拉选项*/
+	height: 27px;
+	width: 180px;
+	font-size:13px;
+	color:rgb(100,100,100);
+}
+.infoDiv table tr{
+	height: 50px;
+}
+.selectNowPlace{/*选择现居地*/
+	height: 27px;
+	width: 90px;
+	font-size:13px;
+	color:rgb(100,100,100);
+}
+.saveInfo{/*保存资料按钮*/
+	color:white;
+	font-weight:600;
+	text-align:center;
+	line-height:36px;
+	margin:auto;
+	position:relative;
+	top:20px;
+	margin-bottom:40px;
+	width:100px;
+	height:36px;
+	background-repeat:no-repeat;
+	background-image: url(../../images/myTaoMei/saveinfo1.png);
+	cursor: pointer;
+	clear: both;
+}
+.saveInfo:HOVER{
+	background-image: url(../../images/myTaoMei/saveinfo2.png);
+}
+
+
+#selectTag{
+	margin-left: 20px;
+	
+	margin-bottom: 10px;
+	clear:both;
+	margin-top: 160px;
+}
+.tag1{/*个性标签1,两个字*/
+	background: rgb(218,156,164);
+	display:inline-block;
+	color:white;
+	width: 50px;
+	text-align:center;
+	font-size: 12px;
+	padding: 3px;
+}
+#selectTag span{
+	cursor:pointer;
+	margin: 2px;
+}
+#showTag{/*标签库DIV*/
+	margin-top: 10px;
+	
+}
+#showTag span:hover{
+	text-decoration: underline;
+}
+
+.baseTag1{/*个性标签1,两个字*/
+	display:inline-block;
+	color:white;
+	width: 50px;
+	text-align:center;
+	font-size: 12px;
+	padding: 3px;
+}
+.baseTag2{/*个性标签2,3个字*/
+	display:inline-block;
+	color:white;
+	width: 64px;
+	text-align:center;
+	font-size: 12px;
+	padding: 3px;
+}
+.baseTag3{/*个性标签3,4个字*/
+	display:inline-block;
+	color:white;
+	width: 67px;
+	text-align:center;
+	font-size: 12px;
+	padding: 3px;
+}
+.redTagColor{/*标签颜色*/
+	background: rgb(218,156,164);
+}
+.blueTagColor{
+	background: rgb(128,200,218);
+}
+.xxxTagColor{
+	background: rgb(204,188,159);
+}
+.tagPoint{/*标签提示*/
+	margin-bottom:10px;
+	height: 35px;
+	
+	background: rgb(240,240,240);
+	border:solid 1px rgb(230,230,230);
+	color:gray;
+	line-height:35px;
+	text-align:center;
+	font-size: 13px;
+}
+.selectTag1{/*已经选择的标签*/
+	height: 22px;
+	width: 60px;
+	font-size:13px;
+	display:inline-block;
+	color:gray;
+	border: 1px rgb(200,200,200) solid;
+	text-align:center;
+	line-height:18px;
+	border-radius:3px;
+}
+.selectTag2{/*已经选择的标签*/
+	height: 22px;
+	width: 72px;
+	font-size:13px;
+	display:inline-block;
+	color:gray;
+	border: 1px rgb(200,200,200) solid;
+	text-align:center;
+	line-height:18px;
+	border-radius:3px;
+}
+.selectTag3{/*已经选择的标签*/
+	height: 22px;
+	display:inline-block;
+	width: 80px;
+	font-size:13px;
+	color:gray;
+	border: 1px rgb(200,200,200) solid;
+	text-align:center;
+	line-height:18px;
+	border-radius:3px;
+}
+
+.closeTag{/*关闭已选择的标签*/
+	margin-left: 5px;
+	cursor: pointer;
+}
+#heartArea{/*内心独白文本域*/
+	font-size: 14px;
+	color:rgb(90,90,90);
+	padding: 10px;
+	margin-bottom: 20px;
+}
+.a-upload {
+    padding: 4px 10px;
+    height: 44px;
+    width:165px;
+    background-repeat:no-repeat;
+    background-image:url(../../images/myTaoMei/upLoadHead1.png);
+    line-height: 20px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    display: block;
+    *display: inline;
+    *zoom: 1;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.a-upload  input {
+    position: absolute;
+    
+    height: 44px;
+    width:165px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+
+}
+
+.a-upload:HOVER{
+   background-image:url(../../images/myTaoMei/upLoadHead2.png);
+}
+#upLoadHead{
+	margin-left:80px;
+}
+#upLoadHeadTextImg{/*上传文件的文本说明*/
+	margin-top: 30px;
+	clear: both;
+	margin-bottom: 20px;
+}
+#IDValidateTable{/*身份信息验证表格*/
+	margin:auto;
+	margin-bottom: 50px;
+}
+#IDValidateTable tr td{
+	width: 250px;
+}
+#IDValidateTable img{
+	display:block;
+	margin: auto;
+	margin-top: 20px;
+}
+#IDValidateTable p{
+	color:rgb(51,51,51);
+	font-weight: bold;
+	font-size: 12px;
+	text-align: center;
+	margin-top: 10px;
+}
+#IDValidateTable span{
+	display:block;
+	text-align: center;
+	font-size:13px;
+	margin-top:-5px;
+	margin-bottom:-5px;
+	color:rgb(153,153,153);
+}
+#IDValidateTable tr{
+	height: 250px;
+}
+#IDValidateTable .subValidate{
+	width:190px;
+	height:235px;
+	margin:auto;
+	border:1px solid rgb(222,222,222);
+}
+#photoTable{/*相册表格*/
+	width: auto;
+	margin-bottom: 30px;
+}
+#photoTable td{
+	width: 150px;
+	height: 200px;
+}
+.allPhotoDiv{
+	height: 180px;
+	width: 130px;
+
+}
+.photoDiv{/*包裹每张照片的Div*/
+	height: 130px;
+	width: 130px;
+	border: 1px solid rgb(226,226,226);
+	padding: 3px;
+}
+.photo{/*每张照片*/
+	display:inline-block;
+	width: 120px;
+	position:absolute;
+	clip: rect(0,120,120,0);
+	cursor: pointer;
+}
+.deletePhoto{/*删除相片*/
+	color:rgb(153,153,153);
+	float: left;
+	font-size: 13px;
+	width: 64px;
+	border: solid 1px rgb(226,226,226);
+	border-left-radius:10px;
+	border-right:none;
+	height: 36px;
+	text-align: center;
+	line-height: 36px;
+	margin-top: 15px;
+	position: relative;
+	left:1px;
+	cursor: pointer;
+	border-radius:3px 0px 0px 3px;
+}
+.viewPhoto{/*预览相片*/
+	color:rgb(153,153,153);
+	float: right;
+	font-size: 13px;
+	width: 64px;
+	border: solid 1px rgb(226,226,226);
+	border-radius:0px 3px 3px 0px;
+	height: 36px;
+	text-align: center;
+	line-height: 36px;
+	margin-top: 15px;
+	position: relative;
+	right:1px;
+	cursor: pointer;
+	
+}
+
+.p-upload {/*上传相册按钮*/
+    padding: 4px 10px;
+    height: 36px;
+    width:130px;
+    color:white;
+    font-size:15px;
+    line-height:40px;
+    text-align:center;
+	border:1px solid rgb(0,173,181);
+	background:rgb(0,211,220);
+    line-height: 36px;
+    position: relative;
+    cursor: pointer;
+    border-radius:5px;
+    overflow: hidden;
+    display: block;
+    *display: inline;
+    *zoom: 1;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.p-upload  input {
+    position: absolute;
+    font-size: 100px;
+    height: 36px;
+    width:130px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+
+}
+
+.p-upload:HOVER{
+   background:rgb(13,219,228);
+}
+
+.allAlert{
+	position: absolute;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	top:0;
+	display: none;
+}
+.alertBG{/*弹出层背景*/
+	background: rgb(0,0,0);
+	width: 100%;
+	height: 100%;
+	opacity:0.4;
+}
+.baseAlert{/*弹出层通用内容*/
+	position: absolute; 
+	left: 50%; 
+	top: 50%;
+    transform: translate(-50%, -50%); /* 50%为自身尺寸的一半 */	
+}
+.validateAlert{/*身份相关验证的弹出层*/
+	box-shadow:0 0 5px rgb(180,180,180);
+	background:white;
+	width: 430px;
+	height: 320px;
+	border: solid 1px rgb(150,150,150);
+	box-shadow:0 0 5px rgb(200,200,200);
+}
+.validateAlertTitle{/*验证信息的标题*/
+	background: rgb(254,232,235);
+	color:rgb(253,120,139);
+	height: 40px;
+	line-height: 40px;
+	border-top: 1px solid rgb(254,254,254);
+	border-bottom: 1px solid rgb(250,208,218);
+	padding-left: 20px;
+	font-weight: bold;
+}
+.closeValidateAlert{/*关闭验证弹出层*/
+	width:10px;
+	height:10px;
+	float: right;
+	font-size:25px;
+	margin-right: 20px;
+	cursor: pointer;
+}
+.validateContent{/*验证的整体部分*/
+	width: 350px;
+	padding-bottom:20px;
+	border-bottom:solid 1px rgb(228,228,228);
+	margin: auto;
+}
+#IDVilidateResult,#telVilidateResult{/*验证弹出层的执行结果*/
+	display: block;
+	height:20px;
+	display:none;
+	text-align:center;
+	color:red;
+	margin-top:-15px;;
+}
+.validateContent .input-group{
+	margin-top: 20px;
+	width: 330px;
+}
+.photoAlert{/*相册弹出层*/
+	box-shadow:0 0 5px rgb(180,180,180);
+	background:rgb(50,50,50);
+	width: 600px;
+	height: 600px;
+	border: solid 1px rgb(150,150,150);
+	box-shadow:0 0 5px rgb(200,200,200);
+}
+.photoPrePointer{/*上一张照片的Div*/
+	float: left;	
+	width: 22px;
+	height: 39px;
+	margin-top:220px;
+	margin-left:20px;
+	background-repeat:no-repeat;
+	background-image: url("../../images/base/pre1.png");
+	cursor: pointer;	
+}
+.photoPrePointer:HOVER{
+	background-image: url("../../images/base/pre2.png");
+}
+.showPhotoDiv{/*显示照片的div*/
+	width: 450px;
+	height: 450px;
+	
+	margin-left:25px;
+	margin-top: 20px;
+	float: left;
+	overflow:hidden;
+}
+.photoNextPointer{
+	float:right;
+	width: 22px;
+	height: 39px;
+	background-repeat:no-repeat;
+	background-image: url("../../images/base/next1.png");
+	margin-top:220px;
+	cursor: pointer;
+}
+.closePhoto{/*关闭预览相册*/
+	height:29px;
+	width:29px;
+	float:right;
+	position:relative;
+	top:-10px;
+	left:10px;
+	cursor:pointer;
+	background-repeat: no-repeat;
+	background-image: url("../../images/base/photoClose1.png");
+}
+.closePhoto:HOVER{
+	background-image: url("../../images/base/photoClose2.png");
+}
+.photoNextPointer:HOVER{
+	background-image: url("../../images/base/next2.png");
+}
+.alertPhoto{/*弹出层photo IMG*/
+	max-width:450px;
+	max-height:450px;
+	position:relative;
+	left:50%;
+	top:50%;
+	transform: translate(-50%, -50%);
+}
+.photoBottom{/*相册底部*/
+	width: 600px;
+	height: 90px;
+	clear: both;
+	position: relative;
+	border-top:white slide 1px;
+	top:40px;
+}
+.btnPre{/*相册底部的上一张相片*/
+	width: 16px;
+	height: 60px;
+	margin-left:10px;
+	float:left;
+	cursor:pointer;
+	margin-top:15px;
+	background-image: url("../../images/base/btnPre1.png");
+}
+.btnNext{/*相册底部的下一张相片*/
+	width: 16px;
+	height: 60px;
+	float:right;
+	cursor:pointer;
+	margin-right:10px;
+	margin-top:15px;
+	background-image: url("../../images/base/btnNext1.png");
+}
+.btnNext:HOVER{
+	background-image: url("../../images/base/btnNext2.png");
+}
+.btnPre:HOVER{
+	background-image: url("../../images/base/btnPre2.png")
+}
+.alertPhotoDiv{/*照片浏览器底部装照片的DIV*/
+	height: 90px;
+	width:548px;
+	float: left;
+}
+.alertBottomPhoto{/*照片浏览器底部的照片*/
+	height: 60px;
+	max-width:55px;
+	margin-top:10px;
+	margin-left:15px;
+	display: inline-block;
+	clip: rect(0 60px 60px 0);
+	cursor: pointer;
+	
+}
+.alertPhotoBorder{
+	border: white 3px solid;
+	height: 76px;
+	margin-top:0px;
+	position: relative;
+	top:-10px;
+}
+/*右边部分end*/
+
+#footer{/*页脚部分*/
+	width: 850px;
+	margin:auto;
+	margin-top:40px;
+	margin-bottom: 40px;
+}

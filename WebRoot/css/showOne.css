@@ -1,0 +1,444 @@
+@CHARSET "UTF-8";
+#allHead{
+	color:red;
+}
+#allContent{
+	background:rgb(252,252,252);
+	border-bottom: 1px solid rgb(213,213,213);
+	box-shadow:0 0 1px rgb(213,213,213);
+	
+}
+#content{
+	width: 1000px;
+	margin: auto;
+	margin-bottom: 20px;	
+}
+/*顶部begin*/
+#topInfo{/*顶部资料Div*/
+	width: 1000px;
+	height: 230px;
+	position:relative;
+	top:20px;
+	background: white;	
+	box-shadow:0 0 5px rgb(213,213,213);
+}
+#headPicture{/*头像*/
+	max-width: 150px;
+	position:absolute;
+	clip: rect(0px 150px 180px 0px);
+	margin-left: 20px;
+	margin-top: 20px;
+	border: 4px solid rgb(236,236,236);
+	
+}
+#VIPimg{/*vip标签*/
+	position: absolute;
+	z-index:1;
+	left:20px;
+	top:20px;
+}
+#isOnline{/*显示是否在线的Div*/
+	position: absolute;
+	top:190px;
+	left:20px;
+	color:rgb(90,90,90);
+	background:rgb(236,236,236);
+	width:150px;
+	height: 25px;
+	line-height: 25px;
+	font-size: 13px;
+}
+#onlineImg{/*是否在线的图片*/
+	margin-left: 10px;
+	margin-right: 5px;
+	margin-bottom: 3px;
+}
+#baseInfoDiv{/*顶部基本信息的div*/
+	float: left;
+	width:600px;
+	height:190px;
+	position:absolute;
+	top:27px;
+	margin-left:200px;	
+}
+
+#nickName{/*昵称*/
+	font-size: 26px;
+}
+#updateInfoDiv{/*修改资料的Div*/
+	display: inline-block;
+	height: 30px;
+	right:20px;
+	top:20px;
+	z-index:100;
+	float:right;
+	width:1000px;
+	position:absolute;
+	text-align: right;
+}
+#updateInfoDiv a{
+	text-decoration: none;
+}
+#IDValidateUl{/*验证信息的ul*/
+	list-style: none;
+	display: inline-block;
+	position: relative;
+	top:13px;
+	
+}
+#IDValidateUl li {
+	float: left;
+	margin-left: 10px;
+}
+#IDValidateUl li img{
+	width: 20px;
+	height: 20px;
+	border-radius:10px;
+}
+#someInfoUl{/*顶部居住地等信息*/
+	list-style: none;
+	margin-top:-5px;
+}
+
+#someInfoUl li{/*顶部居住地等信息*/
+	float: left;
+	margin-left: 10px;
+	color:rgb(120,120,120);
+}
+.baseTag1{/*个性标签1,两个字*/
+	display:inline-block;	
+	width: 50px;
+	text-align:center;
+	font-size: 12px;
+	padding: 3px;
+}
+.baseTag2{/*个性标签2,3个字*/
+	display:inline-block;
+	width: 64px;
+	text-align:center;
+	font-size: 12px;
+	padding: 3px;
+}
+.baseTag3{/*个性标签3,4个字*/
+	display:inline-block;	
+	width: 67px;
+	text-align:center;
+	font-size: 12px;
+	padding: 3px;
+}
+.redTagColor{/*标签颜色*/
+	border-bottom: 1px dashed rgb(218,156,164);
+	color:rgb(218,156,164);
+}
+.blueTagColor{
+	border-bottom: 1px dashed rgb(128,200,218);
+	color:rgb(128,200,218);
+}
+.xxxTagColor{
+	border-bottom: 1px dashed rgb(204,188,159);
+	color:rgb(204,188,159);
+}
+.selectTag1{/*已经选择的标签*/
+	height: 22px;
+	width: 60px;
+	font-size:13px;
+	display:inline-block;
+	color:gray;
+	border: 1px rgb(200,200,200) solid;
+	text-align:center;
+	line-height:18px;
+	border-radius:3px;
+}
+.selectTag2{/*已经选择的标签*/
+	height: 22px;
+	width: 72px;
+	font-size:13px;
+	display:inline-block;
+	color:gray;
+	border: 1px rgb(200,200,200) solid;
+	text-align:center;
+	line-height:18px;
+	border-radius:3px;
+}
+.selectTag3{/*已经选择的标签*/
+	height: 22px;
+	display:inline-block;
+	width: 80px;
+	font-size:13px;
+	color:gray;
+	border: 1px rgb(200,200,200) solid;
+	text-align:center;
+	line-height:18px;
+	border-radius:3px;
+}
+#showTag{/*显示标签的DIV*/
+	margin-top: 40px;
+	height: 60px;
+	
+}
+#showTag span{
+	margin: 2px;
+	font-weight: bold;
+}
+#opreations div{/*对用户的操作*/
+	float: left;
+	margin-top:15px;
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	cursor: pointer;
+}
+#opreations a{
+	background: rgb(254,135,35);
+	color:white;
+	text-decoration: none;
+}
+#wirterLetter{/*写信Div*/
+	background: rgb(254,135,35);
+	color:white;
+}
+#wirterLetter:HOVER{
+	background: rgb(255,116,0);
+}
+#chat{/*聊天DIV*/
+	background:rgb(0,152,194);
+	color:white;
+	margin-left: 20px;
+}
+#chat:HOVER{
+	background: rgb(0,134,171);
+}
+#giveGift,#addFriends{/*送礼物和加为好友*/
+	border: solid 1px rgb(213,213,213);
+	margin-left: 20px; 
+}
+#giveGift:HOVER,#addFriends:HOVER{
+	background: rgb(213,213,213);
+}
+#allPhotoDiv{/*所有相册的DIV*/
+	width: 1000px;
+	height: 120px;
+	margin-top:30px;
+	background: white;
+	padding:1px;
+	box-shadow:0 0 5px rgb(213,213,213);
+}
+#photoTable{
+	margin-left: 30px;
+	margin-top: 10px;
+}
+#allPhotoDiv tr td{
+	width: 120px;
+	
+}
+.photo{/*每张照片*/
+	display:inline-block;
+	width: 100px;
+	display:inline-block;
+	position:absolute;
+	clip: rect(0px 100px 100px 0px);
+	cursor: pointer;
+}
+#allInfo{/*整个信息Div*/
+	padding:1px;
+	width: 1000px;
+	margin-top:10px;
+	background: white;
+	box-shadow:0 0 5px rgb(213,213,213);
+}
+.subDeta{
+	margin-left: 25px;	
+	margin-right: 20px;
+	
+}
+#allDeta{/*详细信息Div*/
+	height: 280px;	
+	
+}
+#allQual{/*征友条件DIV*/
+	height: 150px;	
+}
+.infoTitle div{
+	display:inline-block;
+	width:12px;
+	height:12px;
+	background-image: url("../images/myTaoMei/circle.png")
+}
+.infoTitle span{
+	font-size: 18px;
+	margin-left: 5px;
+}
+.infoContent{/*具体内容部分*/
+	margin-left: 18px;
+	margin-top: 10px;
+	
+}
+.infoTable{/*资料表格*/
+	float: left;
+	width: 400px;
+}
+
+.infoTable tr td:first-child{
+	color:rgb(153,153,153);
+	font-size: 14px;
+	height: 35px;
+	width: 130px;
+}
+.infoTable tr td:last-child{
+	color:rgb(77,77,77);
+	font-size: 14px;
+	width: 250px;
+}
+#allGift{/*收到的礼物*/
+	height: 150px;
+}
+.gift{/*礼物图片*/
+	display:inline-block;
+	margin-left: 20px;
+}
+.allAlert{
+	position: absolute;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	top:0;
+	display: none;
+}
+.alertBG{/*弹出层背景*/
+	background: rgb(0,0,0);
+	width: 100%;
+	height: 100%;
+	opacity:0.4;
+}
+.baseAlert{/*弹出层通用内容*/
+	position: absolute; 
+	left: 50%; 
+	top: 50%;
+    transform: translate(-50%, -50%); /* 50%为自身尺寸的一半 */	
+}
+.photoAlert{/*相册弹出层*/
+	box-shadow:0 0 5px rgb(180,180,180);
+	background:rgb(50,50,50);
+	width: 600px;
+	height: 600px;
+	border: solid 1px rgb(150,150,150);
+	box-shadow:0 0 5px rgb(200,200,200);
+}
+.photoPrePointer{/*上一张照片的Div*/
+	float: left;	
+	width: 22px;
+	height: 39px;
+	margin-top:220px;
+	margin-left:20px;
+	background-repeat:no-repeat;
+	background-image: url("../images/base/pre1.png");
+	cursor: pointer;	
+}
+.photoPrePointer:HOVER{
+	background-image: url("../images/base/pre2.png");
+}
+.showPhotoDiv{/*显示照片的div*/
+	width: 450px;
+	height: 450px;
+	margin-left:25px;
+	margin-top: 20px;
+	float: left;
+	overflow:hidden;
+}
+.photoNextPointer{
+	float:right;
+	width: 22px;
+	height: 39px;
+	background-repeat:no-repeat;
+	background-image: url("../images/base/next1.png");
+	margin-top:220px;
+	cursor: pointer;
+}
+.closePhoto{/*关闭预览相册*/
+	height:29px;
+	width:29px;
+	float:right;
+	position:relative;
+	top:-10px;
+	left:10px;
+	cursor:pointer;
+	background-repeat: no-repeat;
+	background-image: url("../images/base/photoClose1.png");
+}
+.closePhoto:HOVER{
+	background-image: url("../images/base/photoClose2.png");
+}
+.photoNextPointer:HOVER{
+	background-image: url("../images/base/next2.png");
+}
+.alertPhoto{/*弹出层photo IMG*/
+	max-width:450px;
+	max-height:450px;
+	position:relative;
+	left:50%;
+	top:50%;
+	transform: translate(-50%, -50%);
+}
+.photoBottom{/*相册底部*/
+	width: 600px;
+	height: 90px;
+	clear: both;
+	position: relative;
+	border-top:white slide 1px;
+	top:40px;
+}
+.btnPre{/*相册底部的上一张相片*/
+	width: 16px;
+	height: 60px;
+	margin-left:10px;
+	float:left;
+	cursor:pointer;
+	margin-top:15px;
+	background-image: url("../images/base/btnPre1.png");
+}
+.btnNext{/*相册底部的下一张相片*/
+	width: 16px;
+	height: 60px;
+	float:right;
+	cursor:pointer;
+	margin-right:10px;
+	margin-top:15px;
+	background-image: url("../images/base/btnNext1.png");
+}
+.btnNext:HOVER{
+	background-image: url("../images/base/btnNext2.png");
+}
+.btnPre:HOVER{
+	background-image: url("../images/base/btnPre2.png")
+}
+.alertPhotoDiv{/*照片浏览器底部装照片的DIV*/
+	height: 90px;
+	width:548px;
+	float: left;
+}
+.alertBottomPhoto{/*照片浏览器底部的照片*/
+	height: 60px;
+	max-width:55px;
+	margin-top:10px;
+	margin-left:15px;
+	display: inline-block;
+	clip: rect(0 60px 60px 0);
+	cursor: pointer;
+	
+}
+.alertPhotoBorder{
+	border: white 3px solid;
+	height: 76px;
+	margin-top:0px;
+	position: relative;
+	top:-10px;
+}
+/*顶部end*/
+
+#footer{
+	width: 850px;
+	margin:auto;
+	margin-top:40px;
+	margin-bottom: 40px;
+}

@@ -1,0 +1,165 @@
+@CHARSET "UTF-8";
+
+/*右边部分begin*/
+#allCRight{
+	width:795px;
+	padding-bottom:15px;
+	background:white;
+	float: right;
+	margin-top:20px;
+	border: 1px solid rgb(213,213,213);
+	box-shadow:0 0 5px rgb(213,213,213);
+}
+.rightTitle{/*右边部分的标题*/
+	font-size: 16px;
+	height: 30px;
+	border-bottom: solid 1px rgb(236,236,236);
+	line-height: 30px;
+	padding-left: 30px;
+	font-weight: 600;
+}
+#palQualificationDiv{/*择偶标准的Div*/
+	height: 30px;
+	width: 750px;
+	background: rgb(255,252,233);
+	line-height: 30px;
+	margin: auto;
+	margin-top: 10px;
+	padding-left: 10px;
+}
+#palQualificationDiv:not(span){
+	font-size:13px;
+}
+#palQualificationText{/*择偶标准的文本*/
+	float: right;
+	margin-right: 10px;
+	font-size:12px;
+	color:rgb(47,177,209);
+	cursor: pointer;
+}
+#palQualificationText:HOVER{
+	text-decoration: underline;
+}
+.quaHead{/*推荐用户头像*/
+	width: 110px;
+	height: 130px;
+	margin-left: 8px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.quaNameAndAge{
+	color: rgb(90,90,90);
+	font-size: 13px;
+	margin-top: 5px;	
+	text-align:center;
+	
+}
+.quaPlace{
+	color: rgb(120,120,120);
+	font-size: 12px;
+	margin-top:-5px;
+	text-align:center;	
+}
+#qualificationTable{/*用户推荐表*/
+	margin-top: 10px;;
+	margin-left: 20px;
+}
+.otherUserInfoDiv{/*用户推荐里的Div*/
+	height: 190px;
+	width: 130px;
+	position: relative;
+	margin: 10px 10px 10px 10px;
+	
+	overflow: hidden;
+}
+.otherUserInfoDiv a:FOCUS{
+	outline: none;
+	text-decoration: none;
+}
+
+.otherUserInfoDiv:HOVER{
+	box-shadow:0 0 5px rgb(150,150,150);
+}
+.newsUserDiv{/*今日新星DIV*/
+	height: 165px;
+	width: 750px;
+	position: relative;
+	padding: 1px;
+	
+}
+.newsHead{/*头像*/
+	width: 110px;
+	height: 130px;
+	margin-left: 30px;
+	margin-top: 15px;
+	cursor: pointer;
+	float:left;
+	margin-right: 20px;
+	padding: 4px;
+	border: rgb(213,213,213) 1px solid;
+}
+.newsName{/*昵称*/
+	font-size: 15px;
+	margin-top: 20px;
+}
+.validateLV{/*认证等级*/
+	display:inline-block;
+	margin-top: -10px;
+	color:rgb(120,120,120);
+}
+.validateLVTable{/**/
+	display: inline-block;
+	position: relative;
+	top:5px;
+}
+.validateLVTable img{
+	width: 18px;
+	height: 18px;
+	border-radius:9px;
+	margin-left: 8px;
+}
+.newsInfo{/*新人用户信息*/
+	margin-top: 10px;
+	color:rgb(90,90,90);
+	font-size: 13px;
+}
+.showPhoto{/*显示相册的DIV*/
+	float: right;
+
+}
+.showPhoto img{
+	width: 55px;
+	height: 65px;
+	margin-left: 10px;
+	margin-top: 10px;
+	border: rgb(213,213,213) 1px solid;
+	
+}
+.sayHi{/*打招呼*/
+	background: rgb(254,135,35);
+	width: 85px;
+	height: 31px;
+	line-height: 31px;
+	text-align: center;
+	margin-left: 160px;
+	cursor: pointer;
+}
+.sayHi a{
+	color:white;
+	text-decoration: none;
+}
+a:FOCUS{
+	outline: none;
+}
+.sayHi:HOVER{
+	background: rgb(255,116,0);
+}
+/*右边部分end*/
+
+#footer{/*页脚部分*/
+	width: 850px;
+	margin:auto;
+	margin-top:40px;
+	margin-bottom: 40px;
+}

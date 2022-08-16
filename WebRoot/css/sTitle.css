@@ -1,0 +1,77 @@
+@CHARSET "UTF-8";
+
+/*顶部begin*/
+*{
+	margin: 0;
+	padding: 0;
+}
+#allHead{
+		border-bottom: solid 1px rgb(213,213,213);		
+		height: 135px;
+		margin-top: -10px;
+}
+#head{
+	height: 40px;
+	background: rgb(68,68,68);
+	
+}
+#headContent{
+	width: 1000px;
+	margin: auto;
+	height: 40px;
+}
+#headContent li{
+	float: left;
+	list-style: none;
+	color:white;
+	font-size: 14px;
+	margin-left: 26px;
+	line-height: 40px;
+	
+}
+#headContent a{
+	color:white;
+	margin-left: 5px;
+	text-decoration: underline;	
+}
+#content2{
+	float: right;	
+}
+#logoDiv{
+	width: 1000px;
+	margin: auto;
+	margin-top: 15px;
+}
+#logoDiv img{
+	width: 160px;
+}
+#vipImg{
+	float: right;
+}
+#allNav{
+	width: 1040px;
+	margin: auto;
+	height: 26px;
+	
+}
+#allNav ul li{
+	list-style: none;
+	float: left;
+	font-size: 17px;
+	font-weight: 500;
+	margin-left: 20px;
+	height:30px;
+	width: 70px;
+	text-align: center;
+	line-height: 27px;
+
+}
+#allNav a{
+	color:black;
+	text-decoration: none;
+}
+.navChange{
+	 border-bottom: 3px solid rgb(255,91,112);
+}
+/*顶部end*/
+

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.multipart.saveDir" value="/tmp"></constant>
+	<package name="loginAndRegister" extends="struts-default">
+	
+		<action name="loginAction" class="loginAction">
+			<result name="success">/jsp/myTaoMei/recommend.jsp</result>
+		</action>
+		<action name="registerAction" class="registerAction"></action>
+		<action name="validataCodeAction" class="validataCodeAction"/>
+		<action name="showOneAction" class="showOneAction">
+			<result name="success">/jsp/myTaoMei/showOne.jsp</result>
+		</action>
+		<action name="searchQualUserAction" class="searchQualUserAction">
+			<result name="success">/jsp/search/search.jsp</result>
+		</action>
+		<action name="writeEmailAction" class="writeEmailAction">
+			<result name="success">/jsp/writeEmail/writeEmail.jsp</result>
+		</action>
+		<action name="emailListAction" class="emailListAction">
+			<result name="success">/jsp/myTaoMei/space.jsp</result>
+		</action>
+		<action name="readEmailAction" class="readEmailAction">
+			<result name="success">/jsp/myTaoMei/readEmail.jsp</result>
+		</action>
+		<action name="chatAction" class="chatAction">
+			<result name="success">/jsp/chat/chat.jsp</result>
+		</action>
+		<action name="newTalkAction" class="newTalkAction">
+			<result name="success">/jsp/club/club.jsp</result>
+		</action>
+		<action name="showOneTalkAction" class="showOneTalkAction">
+			<result name="success">/jsp/club/showTalk.jsp</result>
+		</action>
+	</package>
+</struts>

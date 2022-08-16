@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yucheng.taomei.vo.user">
+	
+	<!-- 注册新用户 -->
+	<insert id="insertNewUser">
+		insert into users
+		(account,passWords,nickName,age,sex,height,educational,marriage,city,town,income,introduction,tag,
+		wantLivePlace,wantEducational,wantIncome,wantLowestAge,wantHighestAge,wantLowestHeight,wantHighestHeight) 
+		values(#{account},#{passWords},#{nickName},#{age},#{sex},#{height},#{educational},#{marriage},#{city},#{town},#{income},#{introduction},#{tag},
+		#{city},#{educational},#{income},#{age},#{age},#{height},#{height}
+		)
+	</insert>
+	
+	<!-- 查询账号是否被注册 -->
+	<select id="isAccountRegisted" resultType="string">
+		select account from users where account=#{value}
+	</select>
+	
+	<!-- 查询用户的账号密码是否正确 -->
+	<select id="isTrueUser" resultType="string">
+		select account from users where account = #{account} and passWords = #{passWords}
+	</select>
+	
+	<!--设置上次登录时间 -->
+	<update id="updateLastLoginTime">
+		update users set lastLoginTime = #{lastLoginTime} where account=#{account};
+	</update>
+	
+	<!-- 更新头像 -->
+	<select id="updateHead">
+		update users set headPicture=#{headPicture} where users_id=#{users_id}
+	</select>
+	
+	<!-- 获得用户自己所有资料 -->
+	<select id="getAllInfoUser" resultType="AllInfoUser">
+		select *from users where account = #{value}
+	</select>
+	<!-- 获得用户所有资料 -->
+	<select id="getOtherInfoUser" resultType="AllInfoUser">
+		select *from users where users_id=#{value}
+	</select>
+
+	<!-- 更新用户的基本资料 -->
+	<update id="updateBaseInfo">
+		update users set nickName=#{nickName},age=#{age},height=#{height},weights=#{weights},educational=#{educational},
+		city=#{city},town=#{town},QQ=#{QQ},blood=#{blood},profession=#{profession},marriage=#{marriage},hasHouseAble=#{hasHouseAble},
+		income=#{income} where users_id=#{users_id}
+	</update>
+	
+	<!-- 更新用户的详细资料 -->
+	<update id="updateDetaInfo">
+		update users set wantChildAble=#{wantChildAble},distanceLoveAble=#{distanceLoveAble},loverType=#{loverType},
+		sexAble=#{sexAble},liveWithParentsAble=#{liveWithParentsAble},prettyParts=#{prettyParts},tag=#{tag},
+		introduction=#{introduction} where users_id=#{users_id}
+	</update>
+	
+	<!-- 更新用户的征友要求 -->
+	<update id="updateQualInfo">
+		update users set wantLivePlace=#{wantLivePlace},wantEducational=#{wantEducational},wantIncome=#{wantIncome},
+		wantWeight=#{wantWeight},wantLowestAge=#{wantLowestAge},wantHighestAge=#{wantHighestAge},wantLowestHeight=#{wantLowestHeight},wantHighestHeight=#{wantHighestHeight} 
+		where users_id=#{users_id}
+	</update>
+	
+	<!-- 更新内心独白 -->
+	<update id="updateIntroduction">
+		update users set introduction=#{introduction} where users_id=#{users_id}
+	</update>
+	
+	<!-- 更新相册 -->
+	<update id="updatePhoto">
+		update users set photo = #{photo} where users_id=#{users_id}
+	</update>
+	
+	<!--更新用户ID-->
+	<update id="updateID">
+		update users set ID=#{ID} where users_id=#{users_id}
+	</update>
+	
+	<!--更新用户手机号-->
+	<update id="updateTelphone">
+		update users set telphone=#{telphone} where users_id=#{users_id}
+	</update>
+	
+	<!--获得符合登陆用户择偶标准的用户信息（桃梅推荐） -->
+	<select id="getRecommendUser" resultType="RecommendUser">
+		select top 10 users_id,headPicture,nickName,age,city,town from users where 
+		<if test='wantLivePlace!="保密"'>city = #{wantLivePlace}</if>
+		<if test='wantLowestAge!="保密"'>and age &gt;= #{wantLowestAge}</if>
+		<if test='wantHighestAge!="保密"'>and age &lt;= #{wantHighestAge}</if>
+		<if test='wantLowestHeight!="保密"'>and height &gt;= #{wantLowestHeight}</if>
+		<if test='wantHighestHeight!="保密"'>and height &lt;= #{wantHighestHeight}</if>
+		and sex != #{sex}
+	</select>
+	
+	<!-- 获得符合登陆用户今日新星的用户信息（桃梅推荐） -->
+	<select id="getNewStarUser" resultType="NewStarUser">
+		select top 2 users_id,nickName,headPicture,city,town,age,height,educational,income,ID,telphone,photo from users where sex=#{sex} order by users_id desc
+	</select>
+	
+	<!--获得用户条件搜索和标签专区的用户信息 -->
+	<select id="getSearchInfoUser" resultType="SearchInfoUser">
+		select top 10 users_id,nickName,headPicture,age,height,city,town,
+		wantLivePlace,wantEducational,wantLowestAge,wantHighestAge,wantLowestHeight,wantHighestHeight
+		from users where sex=#{wantSex} and city=#{wantLivePlace} and age &gt;= #{wantLowestAge} and age &lt;= #{wantHighestAge}
+		<if test="wantEducational!=null">and educational=#{wantEducational}</if>
+		<if test="wantIncome!=null">and income=#{wantIncome}</if>
+		<if test='wantLowestHeight!=null'>and height &gt;= #{wantLowestHeight}</if>
+		<if test='wantHighestHeight!=null'>and height &lt;= #{wantHighestHeight}</if>
+		<if test='wantMarriage!=null'>and marriage = #{wantMarriage}</if>
+		<if test='wantTag!=null'>and tag like '%${wantTag}%'</if>
+		and users_id not in (select top ${page} users_id from users)
+	</select>
+	
+	<!-- 获得用户条件搜索和标签专区的用户信息的数量 -->
+	<select id="getSearchInfoUserCount" resultType="int">
+		select count(*) from users where sex=#{wantSex} and city=#{wantLivePlace} and age &gt;= #{wantLowestAge} and age &lt;= #{wantHighestAge}
+		<if test="wantEducational!=null">and educational=#{wantEducational}</if>
+		<if test="wantIncome!=null">and income=#{wantIncome}</if>
+		<if test='wantLowestHeight!=null'>and height &gt;= #{wantLowestHeight}</if>
+		<if test='wantHighestHeight!=null'>and height &lt;= #{wantHighestHeight}</if>
+		<if test='wantMarriage!=null'>and marriage = #{wantMarriage}</if>
+		<if test='wantTag!=null'>and tag like '%${wantTag}%'</if>
+	</select>
+	
+	<!--获得写信时的用户信息 -->
+	<select id="getWriteEmailUser" resultType="WriteEmailUser">
+		select users_id,nickName,age,height,sex,marriage,educational,city,town,income,photo,headPicture,lastLoginTime from users where users_id=#{value}
+	</select>
+	
+	<!-- 获得用户的内心独白 -->
+	<select id="getHeart" resultType="string">
+		select introduction from users where users_id=#{value}
+	</select>
+</mapper>

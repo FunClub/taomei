@@ -1,0 +1,67 @@
+@CHARSET "UTF-8";
+/*顶部begin*/
+*{
+	margin: 0;
+	padding: 0;
+}
+a:FOCUS{
+	outline: none;
+}
+#logo{
+	float: left;
+	margin-top: 10px;
+	width: 143px;
+	height: 36px;
+}
+#head{/*整个头部DIV*/
+	height: 100px;
+	background: rgb(245,245,245);
+	height: 60px;
+	border-bottom: 1px solid rgb(222,222,222);
+	margin-top: -10px;
+}
+
+.titleNavLeft{/*左边标题导航*/
+	position: relative;
+	left:20px;
+}
+.titleNavLeft a{
+	color: black;	
+}
+.titleNavLeft li{
+	float: left;
+	list-style: none;
+	font-size: 14px;
+	line-height: 60px;	
+}
+.titleFenGe{/*标题分割线*/
+	color:rgb(200,200,200);
+	margin:0 10 0 10;
+
+}
+#headContent{
+	width: 1000px;
+	margin: auto;
+	height: 60px;
+	
+}
+.titleNavRight li{
+	float: right;
+	list-style: none;
+	font-size: 14px;
+	line-height: 60px;	
+}
+.titleNavRight{
+	position: relative;
+	left:20px;
+}
+.titleNavRight a{
+	color: black;
+	text-decoration: underline;
+}
+.accountInfoText{
+	margin-right:5px;
+	display:inline-block;
+	color:rgb(120,120,120);
+}
+/*顶部end*/

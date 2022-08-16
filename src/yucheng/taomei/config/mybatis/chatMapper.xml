@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yucheng.taomei.vo.chat">
+	<!-- 添加好友 -->
+	<insert id="addFriend">
+		insert into chat values(#{users_chid1},#{users_chid2},#{chatText},#{chatTime})
+	</insert>
+	
+	<!-- 好友是否存在 -->
+	<select id="isEmptyFriend" resultType="string">
+		select *from(select users_chid1 from chat where users_chid1=#{users_chid1} and users_chid2=#{users_chid2} 
+		union select users_chid1 from chat where users_chid1=#{users_chid2} and users_chid2=#{users_chid1})s
+	</select>
+	
+	<!--获得好友列表 -->
+	<select id="getFriendList" resultType="ListFriend">
+		select *from(select users_id,headPicture,nickName,city,age,height,marriage from users,chat where users_chid1=#{users_id} and users_chid2=users_id union 
+		select users_id,headPicture,nickName,city,age,height,marriage from users,chat where users_chid2=#{users_id} and users_chid1=users_id)s
+	</select>
+	
+	<!--获得和某个用户的消息记录  -->
+	<select id="getMessage" resultType="string">
+		select*from(select chatText from chat where users_chid1=#{users_chid1} and users_chid2=#{users_chid2} union 
+		select chatText from chat where users_chid1=#{users_chid2} and users_chid2=#{users_chid1})s
+	</select>
+	
+	<!--更新消息记录添加  -->
+	<update id="updateMessage1">
+		update chat set chatText=#{chatText},chatTime=#{messageTime} where users_chid1 = #{from_id} and users_chid2 = #{to_id}
+	</update>
+	<update id="updateMessage2">
+		update chat set chatText=#{chatText},chatTime=#{messageTime} where users_chid2 = #{from_id} and users_chid1 = #{to_id}
+	</update>
+	
+	<!-- 更新消息状态，把未读改为已读 -->
+	<update id="updateMessageState1">
+		update chat set chatText=#{chatText} where users_chid1 = #{from_id} and users_chid2 = #{to_id}
+	</update>
+	<update id="updateMessageState2">
+		update chat set chatText=#{chatText} where users_chid2 = #{from_id} and users_chid1 = #{to_id}
+	</update>
+	
+	<!--获得最近消息列表  -->
+	<select id="getNearFriendList" resultType="NearMessage">
+		select *from(select users_id,headPicture,nickName,chatText,chatTime from users,chat where users_chid1=#{users_id} and users_chid2=users_id union 
+		select users_id,headPicture,nickName,chatText,chatTime from users,chat where users_chid2=#{users_id} and users_chid1=users_id)s order by chatTime desc
+	</select>
+</mapper>

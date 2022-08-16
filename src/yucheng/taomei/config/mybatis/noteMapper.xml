@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yucheng.taomei.vo.note">
+	
+	<!-- 添加一条新的访客记录 -->
+	<insert id="insertVisitor">
+		insert into visitor values(#{users_viid},#{visitorTime},#{visitor_id})
+	</insert>
+	
+	<!-- 查询访客是否存在 -->
+	<select id="hasVisitor" resultType="string">
+		select users_viid from visitor where users_viid=#{users_viid} and visitor_id=#{visitor_id}
+	</select>
+	
+	<!-- 更新一条访客信息 -->
+	<select id="updateVisitor">
+		update visitor set visitorTime=#{visitorTime} where users_viid = #{users_viid} and visitor_id = #{visitor_id}
+	</select>
+	
+	<!-- 查询我的访客记录 -->
+	<select id="getShowVisitor" resultType="ShowVisitor">
+		select visitor_id,headPicture,nickName,visitorTime from visitor,users where users_viid=#{value} and visitor_id=users_id order by visitorTime desc
+	</select>
+	
+	<!-- 添加一条新的关注记录 -->
+	<insert id="insertAttention">
+		insert into attention(atusers_id,attention_id) values(#{atusers_id},#{attention_id})
+	</insert>
+	
+	<!--判断关注记录是否存在  -->
+	<select id="hasAttention" resultType="string">
+		select atusers_id from attention where atusers_id=#{atusers_id} and attention_id=#{attention_id}
+	</select>
+	
+	<!--取消关注  -->
+	<delete id="cancelAttention">
+		delete from attention where atusers_id=#{atusers_id} and attention_id=#{attention_id}
+	</delete>
+	
+	<!-- 查询我的关注记录 -->
+	<select id="getAttention" resultType="ShowAttention">
+		select attention_id,headPicture,nickName,city,town,age,height,introduction from attention,users where atusers_id=#{value} and attention_id=users_id order by at_id desc
+	</select>
+</mapper>

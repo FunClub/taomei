@@ -1,0 +1,175 @@
+@CHARSET "UTF-8";
+/*总体中间通用部分begin*/
+#allContent{/*总体中间部分*/
+	height:1080px;
+	background: rgb(252,252,252);
+	border-bottom: solid 1px rgb(222,222,222);
+}
+
+#content{/*正中间部分*/
+	width: 1000px;
+	
+	margin: auto;
+	position: relative;
+	clear: both;
+}	
+#allCleft{
+	margin-top: 20px;
+	float: left;
+	box-shadow:0 0 5px rgb(213,213,213);
+	
+}
+#allUserInfo{
+	padding-top:1px;
+	width: 190px;		
+	background: white;
+}
+#headAndName{/*用户的名字和头像Div*/
+	position:relative;
+	border-bottom:1px solid rgb(230,230,230);
+}
+#myHeadDiv{
+	width: 100px;
+	height: 100px;
+	border: solid 1px rgb(213,213,213);	
+	margin: auto;
+	position: absolute;
+	border-radius:50px;
+	overflow: hidden;
+	margin-bottom: 20px;
+	left:45px;
+	top:-110px;
+}
+#myHead{/*我的头像*/
+	display:block;
+	margin:auto;
+	width:100px;
+	position:absolute;
+	clip:rect(0px 100px 100px 0px);
+
+}
+#myName{/*我的名字*/
+	font-size: 15px;
+	text-align: center;
+	font-weight: 600;
+	margin-top: 120px;
+}
+#updateInfoImg{/*修改自己信息的图片*/
+	margin-left: 5px;
+}
+#showMyInfo{/*预览自己的信息*/
+	margin:auto;
+	display:inline-block;
+	width:190px;
+	text-align: center;
+	color:rgb(47,177,209);
+	font-size: 12px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+
+
+#validateTable{/*验证信息的table*/
+	margin: auto;
+	margin-top: 10px;
+}
+#validateTable tr td{
+	width: 35px;
+	height: 30px;
+	margin-left: 5px;
+}
+#validateTable tr td img{/*6个验证信息图片*/
+	width: 25px;
+	height: 25px;
+	border-radius:10px;
+}
+#rechargeMYdiv{/*梅元充值的DIV*/
+	margin-top:15px;
+	background: rgb(223,223,223);
+	width: 190px;
+	height: 40px;
+}
+#viewLetterDiv{/*查看信箱DIV*/
+	height: 40x;
+	color:white;
+	
+	background:rgb(25,160,198);
+	width:190px;
+	margin-top:10px;
+	font-weight:600;
+	font-size: 15px;
+	text-align: center;
+	line-height: 40px;
+}
+#viewLetterDiv:HOVER{
+
+	background: rgb(73,189,221);
+}
+#myServiceDiv{/*我的服务DIV*/
+	background:white;
+	width:190px;
+	height:100px;
+	margin-top: 20px;
+}
+.allSelect{/*个人中心的所有选择项*/
+	border-left: solid 3px rgb(235,93,167);
+	padding-left: 5px;
+	margin-left:10px;
+	color:rgb(78,78,78);
+	font-size: 15px;
+	margin-bottom: 10px;
+}
+#serviceTable{/*我的服务表格*/
+	margin:auto;
+	height: 100px;
+	width: 190px
+}
+#serviceTable a{
+	color:rgb(102,102,102);
+}
+.suService{/*服务的具体子服务*/
+	font-size: 13px;
+	color:rgb(102,102,102);
+	width: 80px;
+	padding-left:15px;
+
+}
+#taoMeiDiv{/*我的桃梅*/
+	margin-top:10px;
+	width: 190px;
+	background: white;
+}
+
+#taomeiTable,#infoTable{/*我的桃梅表格*/
+	width: 190px;
+}
+
+.subSelect{/*子选项*/
+	font-size: 13px;
+	color:rgb(102,102,102);
+	padding-left: 15px;
+	display:inline-block;
+	height: 40px;
+	line-height:40px;
+}
+.subSelect:HOVER{
+	text-decoration: none;
+}
+.selectTr:HOVER{
+	background: rgb(236,236,236);
+	cursor: pointer;
+}
+.selectTr a{
+	width: 160px;
+}
+.selectJianTou{/*选项箭头*/
+	font-size: 16px;
+	color:rgb(185,185,185);
+}
+#myInfoDiv{/*我的资料div*/
+	margin-top:10px;
+	width: 190px;
+	background: white;
+}
+
+/*总体中间通用部分end*/

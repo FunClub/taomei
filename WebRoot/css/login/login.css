@@ -1,0 +1,162 @@
+@CHARSET "UTF-8";
+#header{
+	width:900px;
+	margin: auto;
+	margin-top: 8px;
+	height: 62px;
+}
+#header img{
+	float: left;
+}
+#header div{
+	float:left;
+	border-left:solid 1px rgb(225,225,225);
+	width: 1px;
+	height: 40px;
+	margin-top: 5px;
+	margin-left: 20px;
+}
+#header span{
+	display:inline-block;
+	font-size: 18px;
+	color:rgb(150,150,150);
+	margin-left: 13px;
+	margin-top: 13px;
+}
+#center{
+	background: rgb(249,249,249);
+	height: 530px;
+	
+}
+#allLogin{
+	width: 850px;
+	height: 530px;
+	margin: auto;
+}
+#login{
+	width: 370px;
+	margin-top:45px;
+	border: 1px solid rgb(211,211,211);
+	background: white;
+	float: left;
+	min-height: 360px;
+}
+
+#loginTitle{
+	font-size: 18px;
+	font-weight: bold;
+	color:rgb(100,100,100);
+	border-bottom: 1px solid rgb(211,211,211);
+	height: 45px;
+	line-height: 45px;
+	
+}
+#loginTitle span{
+	display: inline-block;
+	margin-left: 30px;
+}
+#loginTable{
+		margin: auto;
+	margin-top: 10px;
+	width: 350px;
+}
+#loginTable tr td:first-child{
+	font-size: 13px;
+	color:rgb(120,120,120);
+	text-align: right;
+	
+}
+#loginTable tr{
+	height: 49px;
+	width: 270px;	
+}
+#account,#passWords{
+	height: 35px;
+	display:inline-block;
+	margin-left:10px;
+	width: 222px;
+}
+#loginLabel2{
+	color: rgb(140,140,140);
+	font-size: 13px;
+	display:inline-block;
+	top:-7px;
+
+}
+#login2{
+	position: relative;
+	margin-left: 10px;
+}
+#sureLogin{
+	background: rgb(255,84,106);
+	width: 105px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	color:white;
+	float: left;
+	margin-left: 10px;
+	cursor: pointer;
+}
+#losePass{
+	color:rgb(140,140,140);
+	font-size: 13px;
+	text-decoration: underline;
+	cursor: pointer;
+	margin-left: 14px;
+	display: inline-block;
+	margin-top: 7px;
+}
+#losePass:HOVER {
+	color:rgb(47,108,138);
+}
+#gotoRegister{
+	color:rgb(120,120,120);
+	font-size: 14px;
+	font-weight:400;
+	text-decoration: underline;
+	cursor: pointer;
+	display: inline-block;
+	text-align: left;
+	margin-left: 10px;
+	
+}
+#otherLogin{
+	margin-top: 10px;
+	margin-left: 10px;
+}
+#otherLoginText{
+	font-size: 13px;
+	font-weight: 400;
+	color:rgb(170,170,170);
+}
+#loginImg{
+	float: right;
+	margin-top: 80px;
+	margin-right: 20px;
+}
+#footer{
+	width: 850px;
+	margin:auto;
+	margin-top:40px;
+}
+#loginPointDiv{
+	background: rgb(254,250,203);
+	height: 35px;
+	width: 310px;
+	margin: auto;
+	margin-top: 10px;
+	border: solid 1px rgb(236,228,130);
+	display: none;
+}
+#loginPointImg{
+	margin-left: 10px;
+}
+#loginPointText{
+	text-align: left;
+	display: inline-block;
+	margin: auto;
+	width: 250px;
+	height: 35px;
+	line-height: 35px;
+}

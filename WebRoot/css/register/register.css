@@ -1,0 +1,307 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/*内容的主体部分*/
+#content{
+	width: 920px;
+	margin: auto;
+	margin-top: 30px;
+	height: 1120px;
+}
+
+
+/*左边begin*/
+#left{
+	width: 220px;
+	display: inline-block;
+	float: left;
+}
+#left li{/*左边的三个图像列表*/
+	list-style: none;
+}
+.leftImg{/*左边的第二和第三张图片*/
+	margin-top: 80px;
+	margin-left: 50px;
+}
+/*左边end*/
+
+
+/*右边begin*/
+#right{/*右边总体DIV*/
+	height: 1130px;
+	width: 675px;	
+	float: right;
+	box-shadow: 0 0 5px rgb(215,215,215);
+}
+#titleImgLeft{/*左边标题图片*/
+	width: 84px;
+	height: 42px;
+	position: relative;
+	right: 10px;
+	margin-top: 5px;
+}
+#titleImgRight{
+	width: 84px;
+	height: 42px;
+	position: relative;
+	left: 15px;
+	margin-top: 5px;
+}
+#titleTextDiv{/*标题的文字DIV*/
+	width: 497px;
+	height: 100px;
+}
+#titleText1{/**/
+	color:rgb(244,49,107);
+	text-align: center;
+	width: 500px;
+	margin-top:10px ;
+	font-size: 18px;
+}
+#titleText2{
+	color:rgb(255,104,123);
+	text-align: center;
+	width: 500px;
+	font-size: 13px;
+}
+#allUserInfo{/*用户全部信息的DIV*/
+	
+}
+#userInfoTable tr{/*用户全部信息的表格*/
+	height: 50px;
+}
+.labelText{ /*表单元素标签*/
+	font-size: 13px;
+	color:rgb(150,150,150);
+	position: relative;
+	
+}
+#userInfoTable tr td:first-child{/*每行表格的第一列*/
+	width: 85px;
+	text-align: right;
+	font-size: 13px;
+	color:rgb(100,100,100);
+}
+.sexDiv{/*男、女的DIV*/
+	margin-left: 20px;
+}
+.infoPointText{/*注册后不可更改的消息提示*/
+	font-size: 13px;
+	color:rgb(150,150,150);
+	width: 250px;
+	text-align: center;
+}
+.selectInfo{/*选择年龄、身高学历等的下拉选项*/
+	width:300px;
+	height: 32px;
+	margin-left: 20px;
+	font-size: 14px;
+	
+}
+.selectNowPlace{/*常住地的两个下拉选项*/
+	width: 140px;
+	font-size: 14px;
+	margin-left: 20px;
+	height: 27px;
+}
+
+.marriageDiv{/*婚姻状况的那三个DIV*/
+	float: left;
+	margin-left: 30px;
+	font-size: 14px
+}
+.accountInfo{/*账号和密码框*/
+	width: 300px;
+	height: 32px;
+	margin-left: 20px;
+	
+}
+.tag1{/*个性标签1,两个字*/
+	background: rgb(218,156,164);
+	display:inline-block;
+	color:white;
+	width: 50px;
+	text-align:center;
+	font-size: 12px;
+	padding: 3px;
+}
+#selectTag span{
+	cursor:pointer;
+	margin: 2px;
+}
+#showTag span:hover{
+	text-decoration: underline;
+}
+
+.baseTag1{/*个性标签1,两个字*/
+	display:inline-block;
+	color:white;
+	width: 50px;
+	text-align:center;
+	font-size: 12px;
+	padding: 3px;
+}
+.baseTag2{/*个性标签2,3个字*/
+	display:inline-block;
+	color:white;
+	width: 64px;
+	text-align:center;
+	font-size: 12px;
+	padding: 3px;
+}
+.baseTag3{/*个性标签3,4个字*/
+	display:inline-block;
+	color:white;
+	width: 67px;
+	text-align:center;
+	font-size: 12px;
+	padding: 3px;
+}
+.redTagColor{/*标签颜色*/
+	background: rgb(218,156,164);
+}
+.blueTagColor{
+	background: rgb(128,200,218);
+}
+.xxxTagColor{
+	background: rgb(204,188,159);
+}
+.tagPoint{/*标签提示*/
+	margin-bottom:10px;
+	height: 35px;
+	width:350px;
+	background: rgb(240,240,240);
+	border:solid 1px rgb(230,230,230);
+	color:gray;
+	float:left;
+	line-height:35px;
+	text-align:center;
+	font-size: 13px;
+}
+.selectTag1{/*已经选择的标签*/
+	height: 22px;
+	width: 60px;
+	font-size:13px;
+	display:inline-block;
+	color:gray;
+	border: 1px rgb(200,200,200) solid;
+	text-align:center;
+	line-height:18px;
+	border-radius:3px;
+}
+.selectTag2{/*已经选择的标签*/
+	height: 22px;
+	width: 72px;
+	font-size:13px;
+	display:inline-block;
+	color:gray;
+	border: 1px rgb(200,200,200) solid;
+	text-align:center;
+	line-height:18px;
+	border-radius:3px;
+}
+.selectTag3{/*已经选择的标签*/
+	height: 22px;
+	display:inline-block;
+	width: 80px;
+	font-size:13px;
+	color:gray;
+	border: 1px rgb(200,200,200) solid;
+	text-align:center;
+	line-height:18px;
+	border-radius:3px;
+}
+
+.closeTag{/*关闭已选择的标签*/
+	margin-left: 5px;
+	cursor: pointer;
+}
+
+#introduction{/*自我介绍的文本域*/
+	border: none;
+	font-size: 13px;
+	color: gray;
+}
+#allValidata{/*验证码框整体Div*/
+	margin-left: 20px;
+	width: 400px;
+	height:65px;
+	margin-top: 20px;
+}
+#validataCodeImg{/*验证码图片*/
+	float:left;
+	margin-right: 20px;
+	cursor: pointer;
+}
+#allValidata p{
+	font-size: 12px;
+	color:rgb(150,150,150);
+}
+#allValidata span{
+	font-size: 14px;
+	color:blue;
+	cursor: pointer;
+	display:inline-block;
+	margin-top:20px;
+}
+#allValidata span:hover{
+	text-decoration: underline;
+	
+}
+#validataCodeInput{/*验证码输入框*/
+	margin-left: 20px;
+	height: 27px;
+	width: 120px;
+}
+#nowRegister{/*立即注册按钮*/
+	width: 285px;
+	height: 55px;
+	background: rgb(21,173,216);
+	border: 1px solid rgb(15,132,165);
+	color:white;
+	text-align: center;
+	line-height: 55px;
+	font-weight: bolder;
+	margin-left: 20px;
+	cursor: pointer;
+	margin-top:10px;
+	border-radius:3px;
+	font-size: 23px;	
+}
+#nowRegister:hover{
+	background: rgb(25,197,237);	
+}
+#chengnuo{/*承诺的span标签*/
+	color:rgb(150,150,150);
+	font-size: 13px;
+	display: inline-block;
+	margin-top: 15px;
+}
+.errorInput{/*错误的账号和密码输入*/
+	border-color:red;
+	box-shadow:0 0 2px red;
+}
+#LoginDiv{/*登陆的Div*/
+	width:136px;
+	height:139px;
+	background-image: url("../../images/register/gotoLogin.png");
+	position: fixed;
+margin-left: 200px;	
+}
+#LoginDiv a{
+	font-size: 13px;
+	display: inline-block;
+	margin-left: 55px;
+	margin-top: 20px;
+}
+/*右边end*/
+
+#footer{/**/
+	width: 850px;
+	margin:auto;
+	margin-top:40px;
+	margin-bottom: 40px;
+	
+}

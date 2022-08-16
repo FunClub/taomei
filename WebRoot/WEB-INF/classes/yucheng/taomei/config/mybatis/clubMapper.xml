@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yucheng.taomei.vo.club">
+	<!-- 发表话题 -->
+	<insert id="insertTalk">
+		insert into talk(users_id,talkTitle,talkContent,talkTag,talkImg,talkTime) 
+		values(#{users_id},#{talkTitle},#{talkContent},#{talkTag},#{talkImg},#{talkTime})
+	</insert>
+	
+	<!-- 获得最新话题列表 -->
+	<select id="getNewTalkList" resultType="NewListTalk">
+		select top 6 t.users_id,talk_id,headPicture,talkTitle,talkContent,talkImg,talkDiscussCount,talkSeeCount,talkTime from users u,talk t where 
+		u.users_id=t.users_id and talk_id not in (select top ${value} talk_id from talk order by talkTime desc) order by talkTime desc
+	</select>
+	
+	<!-- 获得最热话题列表 -->
+	<select id="getHotTalkList" resultType="NewListTalk">
+		select top 6 t.users_id,talk_id,headPicture,talkTitle,talkContent,talkImg,talkDiscussCount,talkSeeCount,talkTime from users u,talk t where 
+		u.users_id=t.users_id and talk_id not in (select top ${value} talk_id from talk order by talkSeeCount desc) order by talkSeeCount desc
+	</select>
+	
+	<!-- 获得话题数量 -->
+	<select id="getTalkCount" resultType="int">
+		select count(*) from talk
+	</select>
+	
+	<!-- 获得一个话题 -->
+	<select id="getOneTalk" resultType="OneTalk">
+		select u.users_id,talk_id,height,talkTitle,talkContent,talkTag,talkImg,talkDiscuss,talkTime,talkSeeCount,talkDiscussCount,
+		headPicture,nickName,age,town,city from talk t,users u where talk_id=#{value} and t.users_id = u.users_id
+	</select>
+	
+	<!-- 增加话题点击量 -->
+	<update id="updateTalkSeeCount">
+		update talk set talkSeeCount=talkSeeCount+1 where talk_id=#{value}
+	</update>
+	
+	
+	<!-- 更新评论 -->
+	<update id="updateDiscuss">
+		update talk set talkDiscuss=#{talkDiscuss},talkDiscussCount=talkDiscussCount+1 where talk_id=#{talk_id}
+	</update>
+	
+	<!-- 获得评论人的信息 -->
+	<select id="getDiscussTalk" resultType="DiscussTalk">
+		select users_id,headPicture,nickName,age,height,city,town from users where users_id=#{value}
+	</select>
+	
+	<!-- 获得相关话题 -->
+	<select id="getAboutTalk" resultType="AboutTalk">
+		select talk_id,talkTitle from talk where talkTag like '%${_parameter}%'
+	</select>
+	
+	<!-- 搜索话题 -->
+	<select id="getSearchTalk" resultType="AboutTalk">
+		select talk_id,talkTitle from talk where 
+		<if test="talkTitle!=null">talkTitle like '%${talkTitle}%'</if>
+		<if test="talkTag!=null"> and talkTag like '%${talkTag}%' </if>
+	</select>
+</mapper>

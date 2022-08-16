@@ -1,0 +1,189 @@
+@CHARSET "UTF-8";
+
+#allContent{/*中间整体部分*/
+	background:rgb(252,252,252);
+	border-bottom: 1px solid rgb(213,213,213);
+	box-shadow:0 0 1px rgb(213,213,213);
+	padding: 1px;
+}
+#content{/*中间内容部分*/
+	width: 1000px;
+	margin:auto;
+	margin-bottom: 40px;	
+	margin-top: 20px;
+}
+#searchQual{/*搜索条件Div*/
+	background:white;
+	
+}
+#searchTabsDiv{/*装有三个选项卡的Div*/
+	border-bottom: 1px rgb(230,230,230) solid;
+	height: 41px;	
+}
+.searchTab{/*三个搜索的选项卡*/
+	float: left;
+	background:white;
+	height: 40px;
+	width:100px;
+	font-size:15px;
+	text-align:center;
+	line-height:40px;
+	color:rgb(146,146,146);
+	cursor:pointer;	
+}
+.searchTabActive{/*选项卡被激活后的样式*/
+	border:solid 1px rgb(230,230,230) ;
+	border-top:3px solid rgb(236,93,167);
+	border-bottom:none;
+	height:41px;
+	z-index:1px;	
+}
+.searchContent{
+	padding: 20px 0px 20px 20px;
+}
+.searchContent:not(#fristSearchContent){/*搜索内容*/
+	display: none;
+}
+#qualTable span,#moreQualTable span{/*条件搜索表格*/
+	color:rgb(102,102,102);
+	font-size: 13px;
+}
+.qualSelect{/*条件选择的下拉列表*/
+	font-size: 13px;
+	color:rgb(58,58,58);
+}
+.sureSearch{/*确认搜索的div*/
+	width: 50px;
+	display:inline-block;
+	height: 25px;
+	color:white;
+	text-align: center;
+	line-height: 25px;
+	border-radius:3px;
+	font-size: 13px;
+	cursor:pointer;
+	background: rgb(236,93,167);
+}
+.banMoreQual{
+	font-size: 13px;
+	color:rgb(180,180,180);
+}
+#showTag{/*显示标签的DIV*/
+	margin-top:10px;
+	margin-bottom: 10px;
+}
+.searchTag{/*搜索标签*/
+	border: 1px solid rgb(200,200,200);
+	border-radius:3px;
+	padding: 4px 10px 4px 10px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+.searchTagActive{/*选择的搜索标签*/
+	background: rgb(236,93,167);
+	border-color:white;
+	color:white;
+}
+#showSearchUser{/*显示搜索用户的Div*/	
+	margin-top:20px;
+	background:white;
+	border:solid 1px rgb(213,213,213);
+	box-shadow:0 0 5px rgb(213,213,213);
+	padding-top:1px;
+}
+#searchResultDiv{
+	padding:5px 0px 10px 20px;
+	border-top: 1px rgb(246,246,246) solid;
+	margin-top:10px;
+	
+}
+.searchResultSpan{/*搜索结果文本*/
+	color:rgb(95,95,95);
+	font-size: 13px;
+}
+#searchResultCount{/*搜索结果数量*/
+	color: rgb(236,93,167);
+	font-size: 18px;
+	margin: 0 5px 0 5px;
+}
+#searchUserTable{/*显示搜索用户的表格*/
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+#searchUserTable td{
+	width: 500px;
+	height: 180px;
+}
+.userDiv{
+	height: 160px;
+	padding: 10px;
+	width: 460px;
+}
+.userDiv:HOVER{
+	box-shadow:0 0 5px rgb(190,190,190);
+}
+.head{/*用户头像*/
+	width:110px;
+	height:135px;
+	float: left;
+	margin-right: 20px;		
+}
+.nickName{/*用户昵称*/
+	font-size: 17px;
+	margin:10px 0px 10px 125px;
+	color:rgb(82,82,82);
+}
+.nickName a{
+	color: rgb(236,93,167);
+}
+.subInfo{/*具体的子信息*/
+	font-size: 13px;
+	display:inline-block;
+	margin-bottom:10px;
+	color:rgb(102,102,102);
+}
+.attention{/*关注TA的图片*/
+	display:inline-block;
+	cursor: pointer;
+	height: 28px;
+	float: right;	
+}
+.sendMessage{/*发消息图片*/
+	position: absolute;
+	clip: rect(0px 88px 28px 0px);
+	cursor: pointer;
+}
+
+.fenge{
+	color:rgb(170,170,170);
+	margin: 0px 5px 50px 5px;
+	font-size: 13px;	
+}
+
+.qualSpan{/*择偶标准的文本提示*/
+	font-size: 14px;
+	
+	color:rgb(80,80,80);
+}
+.operation{/*对用户的操作*/
+	margin-top:5px;
+	float: right;
+	width: 200px;
+	margin-right: 110px;
+	
+}
+#searchPagination{/*搜索分页*/
+	display: inline-block;
+	position: relative;
+	top:30px;
+	left: 50%; 
+    transform: translate(-50%, -50%); /* 50%为自身尺寸的一半 */
+    	
+}
+#footer{/**/
+	width: 850px;
+	margin:auto;
+	margin-top:40px;
+	margin-bottom: 40px;
+	
+}
